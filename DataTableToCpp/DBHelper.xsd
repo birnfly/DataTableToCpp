@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBHelper" targetNamespace="http://tempuri.org/DBHelper.xsd" xmlns:mstns="http://tempuri.org/DBHelper.xsd" xmlns="http://tempuri.org/DBHelper.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="YOYO_GAME_DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="YOYO_GAME_DBConnectionString (Settings)" PropertyReference="ApplicationSettings.DataTableToCpp.Properties.Settings.GlobalReference.Default.YOYO_GAME_DBConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableDescribeTableAdapter" GeneratorDataComponentClassName="TableDescribeTableAdapter" Name="TableDescribe" UserDataComponentName="TableDescribeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="YOYO_GAME_DBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   *
+FROM      information_schema.columns</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TABLE_CATALOG" DataSetColumn="TABLE_CATALOG" />
+              <Mapping SourceColumn="TABLE_SCHEMA" DataSetColumn="TABLE_SCHEMA" />
+              <Mapping SourceColumn="TABLE_NAME" DataSetColumn="TABLE_NAME" />
+              <Mapping SourceColumn="COLUMN_NAME" DataSetColumn="COLUMN_NAME" />
+              <Mapping SourceColumn="ORDINAL_POSITION" DataSetColumn="ORDINAL_POSITION" />
+              <Mapping SourceColumn="COLUMN_DEFAULT" DataSetColumn="COLUMN_DEFAULT" />
+              <Mapping SourceColumn="IS_NULLABLE" DataSetColumn="IS_NULLABLE" />
+              <Mapping SourceColumn="DATA_TYPE" DataSetColumn="DATA_TYPE" />
+              <Mapping SourceColumn="CHARACTER_MAXIMUM_LENGTH" DataSetColumn="CHARACTER_MAXIMUM_LENGTH" />
+              <Mapping SourceColumn="CHARACTER_OCTET_LENGTH" DataSetColumn="CHARACTER_OCTET_LENGTH" />
+              <Mapping SourceColumn="NUMERIC_PRECISION" DataSetColumn="NUMERIC_PRECISION" />
+              <Mapping SourceColumn="NUMERIC_SCALE" DataSetColumn="NUMERIC_SCALE" />
+              <Mapping SourceColumn="CHARACTER_SET_NAME" DataSetColumn="CHARACTER_SET_NAME" />
+              <Mapping SourceColumn="COLLATION_NAME" DataSetColumn="COLLATION_NAME" />
+              <Mapping SourceColumn="COLUMN_TYPE" DataSetColumn="COLUMN_TYPE" />
+              <Mapping SourceColumn="COLUMN_KEY" DataSetColumn="COLUMN_KEY" />
+              <Mapping SourceColumn="EXTRA" DataSetColumn="EXTRA" />
+              <Mapping SourceColumn="PRIVILEGES" DataSetColumn="PRIVILEGES" />
+              <Mapping SourceColumn="COLUMN_COMMENT" DataSetColumn="COLUMN_COMMENT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="YOYO_GAME_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTableName" GetMethodModifier="Public" GetMethodName="GetDataByTableName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTableName" UserSourceName="GetDataByTableName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   *
+FROM      information_schema.columns
+WHERE   (TABLE_SCHEMA = ?) AND (TABLE_NAME = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="DBName" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="TableName" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableNameTableAdapter" GeneratorDataComponentClassName="TableNameTableAdapter" Name="TableName" UserDataComponentName="TableNameTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="YOYO_GAME_DBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   information_schema.tables.*
+FROM      information_schema.tables</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TABLE_NAME" DataSetColumn="TABLE_NAME" />
+              <Mapping SourceColumn="TABLE_CATALOG" DataSetColumn="TABLE_CATALOG" />
+              <Mapping SourceColumn="TABLE_SCHEMA" DataSetColumn="TABLE_SCHEMA" />
+              <Mapping SourceColumn="TABLE_TYPE" DataSetColumn="TABLE_TYPE" />
+              <Mapping SourceColumn="ENGINE" DataSetColumn="ENGINE" />
+              <Mapping SourceColumn="VERSION" DataSetColumn="VERSION" />
+              <Mapping SourceColumn="ROW_FORMAT" DataSetColumn="ROW_FORMAT" />
+              <Mapping SourceColumn="TABLE_ROWS" DataSetColumn="TABLE_ROWS" />
+              <Mapping SourceColumn="AVG_ROW_LENGTH" DataSetColumn="AVG_ROW_LENGTH" />
+              <Mapping SourceColumn="DATA_LENGTH" DataSetColumn="DATA_LENGTH" />
+              <Mapping SourceColumn="MAX_DATA_LENGTH" DataSetColumn="MAX_DATA_LENGTH" />
+              <Mapping SourceColumn="INDEX_LENGTH" DataSetColumn="INDEX_LENGTH" />
+              <Mapping SourceColumn="DATA_FREE" DataSetColumn="DATA_FREE" />
+              <Mapping SourceColumn="AUTO_INCREMENT" DataSetColumn="AUTO_INCREMENT" />
+              <Mapping SourceColumn="CREATE_TIME" DataSetColumn="CREATE_TIME" />
+              <Mapping SourceColumn="UPDATE_TIME" DataSetColumn="UPDATE_TIME" />
+              <Mapping SourceColumn="CHECK_TIME" DataSetColumn="CHECK_TIME" />
+              <Mapping SourceColumn="TABLE_COLLATION" DataSetColumn="TABLE_COLLATION" />
+              <Mapping SourceColumn="CHECKSUM" DataSetColumn="CHECKSUM" />
+              <Mapping SourceColumn="CREATE_OPTIONS" DataSetColumn="CREATE_OPTIONS" />
+              <Mapping SourceColumn="TABLE_COMMENT" DataSetColumn="TABLE_COMMENT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="YOYO_GAME_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetTableNameByDBName" GetMethodModifier="Public" GetMethodName="GetTableNameByDBName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetTableNameByDBName" UserSourceName="GetTableNameByDBName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   information_schema.tables.*
+FROM      information_schema.tables
+WHERE   (TABLE_SCHEMA = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="DBName" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DBHelper" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DBHelper" msprop:Generator_UserDSName="DBHelper">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TableDescribe" msprop:Generator_TableClassName="TableDescribeDataTable" msprop:Generator_TableVarName="tableTableDescribe" msprop:Generator_TablePropName="TableDescribe" msprop:Generator_RowDeletingName="TableDescribeRowDeleting" msprop:Generator_RowChangingName="TableDescribeRowChanging" msprop:Generator_RowEvHandlerName="TableDescribeRowChangeEventHandler" msprop:Generator_RowDeletedName="TableDescribeRowDeleted" msprop:Generator_UserTableName="TableDescribe" msprop:Generator_RowChangedName="TableDescribeRowChanged" msprop:Generator_RowEvArgName="TableDescribeRowChangeEvent" msprop:Generator_RowClassName="TableDescribeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TABLE_CATALOG" msprop:Generator_ColumnVarNameInTable="columnTABLE_CATALOG" msprop:Generator_ColumnPropNameInRow="TABLE_CATALOG" msprop:Generator_ColumnPropNameInTable="TABLE_CATALOGColumn" msprop:Generator_UserColumnName="TABLE_CATALOG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_SCHEMA" msprop:Generator_ColumnVarNameInTable="columnTABLE_SCHEMA" msprop:Generator_ColumnPropNameInRow="TABLE_SCHEMA" msprop:Generator_ColumnPropNameInTable="TABLE_SCHEMAColumn" msprop:Generator_UserColumnName="TABLE_SCHEMA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_NAME" msprop:Generator_ColumnVarNameInTable="columnTABLE_NAME" msprop:Generator_ColumnPropNameInRow="TABLE_NAME" msprop:Generator_ColumnPropNameInTable="TABLE_NAMEColumn" msprop:Generator_UserColumnName="TABLE_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLUMN_NAME" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_NAME" msprop:Generator_ColumnPropNameInRow="COLUMN_NAME" msprop:Generator_ColumnPropNameInTable="COLUMN_NAMEColumn" msprop:Generator_UserColumnName="COLUMN_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ORDINAL_POSITION" msprop:Generator_ColumnVarNameInTable="columnORDINAL_POSITION" msprop:Generator_ColumnPropNameInRow="ORDINAL_POSITION" msprop:Generator_ColumnPropNameInTable="ORDINAL_POSITIONColumn" msprop:Generator_UserColumnName="ORDINAL_POSITION" type="xs:decimal" />
+              <xs:element name="COLUMN_DEFAULT" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_DEFAULT" msprop:Generator_ColumnPropNameInRow="COLUMN_DEFAULT" msprop:Generator_ColumnPropNameInTable="COLUMN_DEFAULTColumn" msprop:Generator_UserColumnName="COLUMN_DEFAULT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="98302" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IS_NULLABLE" msprop:Generator_ColumnVarNameInTable="columnIS_NULLABLE" msprop:Generator_ColumnPropNameInRow="IS_NULLABLE" msprop:Generator_ColumnPropNameInTable="IS_NULLABLEColumn" msprop:Generator_UserColumnName="IS_NULLABLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATA_TYPE" msprop:Generator_ColumnVarNameInTable="columnDATA_TYPE" msprop:Generator_ColumnPropNameInRow="DATA_TYPE" msprop:Generator_ColumnPropNameInTable="DATA_TYPEColumn" msprop:Generator_UserColumnName="DATA_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnVarNameInTable="columnCHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnPropNameInRow="CHARACTER_MAXIMUM_LENGTH" msprop:Generator_ColumnPropNameInTable="CHARACTER_MAXIMUM_LENGTHColumn" msprop:Generator_UserColumnName="CHARACTER_MAXIMUM_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CHARACTER_OCTET_LENGTH" msprop:Generator_ColumnVarNameInTable="columnCHARACTER_OCTET_LENGTH" msprop:Generator_ColumnPropNameInRow="CHARACTER_OCTET_LENGTH" msprop:Generator_ColumnPropNameInTable="CHARACTER_OCTET_LENGTHColumn" msprop:Generator_UserColumnName="CHARACTER_OCTET_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NUMERIC_PRECISION" msprop:Generator_ColumnVarNameInTable="columnNUMERIC_PRECISION" msprop:Generator_ColumnPropNameInRow="NUMERIC_PRECISION" msprop:Generator_ColumnPropNameInTable="NUMERIC_PRECISIONColumn" msprop:Generator_UserColumnName="NUMERIC_PRECISION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NUMERIC_SCALE" msprop:Generator_ColumnVarNameInTable="columnNUMERIC_SCALE" msprop:Generator_ColumnPropNameInRow="NUMERIC_SCALE" msprop:Generator_ColumnPropNameInTable="NUMERIC_SCALEColumn" msprop:Generator_UserColumnName="NUMERIC_SCALE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CHARACTER_SET_NAME" msprop:Generator_ColumnVarNameInTable="columnCHARACTER_SET_NAME" msprop:Generator_ColumnPropNameInRow="CHARACTER_SET_NAME" msprop:Generator_ColumnPropNameInTable="CHARACTER_SET_NAMEColumn" msprop:Generator_UserColumnName="CHARACTER_SET_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="48" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLLATION_NAME" msprop:Generator_ColumnVarNameInTable="columnCOLLATION_NAME" msprop:Generator_ColumnPropNameInRow="COLLATION_NAME" msprop:Generator_ColumnPropNameInTable="COLLATION_NAMEColumn" msprop:Generator_UserColumnName="COLLATION_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="48" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLUMN_TYPE" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_TYPE" msprop:Generator_ColumnPropNameInRow="COLUMN_TYPE" msprop:Generator_ColumnPropNameInTable="COLUMN_TYPEColumn" msprop:Generator_UserColumnName="COLUMN_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="98302" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLUMN_KEY" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_KEY" msprop:Generator_ColumnPropNameInRow="COLUMN_KEY" msprop:Generator_ColumnPropNameInTable="COLUMN_KEYColumn" msprop:Generator_UserColumnName="COLUMN_KEY">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EXTRA" msprop:Generator_ColumnVarNameInTable="columnEXTRA" msprop:Generator_ColumnPropNameInRow="EXTRA" msprop:Generator_ColumnPropNameInTable="EXTRAColumn" msprop:Generator_UserColumnName="EXTRA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRIVILEGES" msprop:Generator_ColumnVarNameInTable="columnPRIVILEGES" msprop:Generator_ColumnPropNameInRow="PRIVILEGES" msprop:Generator_ColumnPropNameInTable="PRIVILEGESColumn" msprop:Generator_UserColumnName="PRIVILEGES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLUMN_COMMENT" msprop:Generator_ColumnVarNameInTable="columnCOLUMN_COMMENT" msprop:Generator_ColumnPropNameInRow="COLUMN_COMMENT" msprop:Generator_ColumnPropNameInTable="COLUMN_COMMENTColumn" msprop:Generator_UserColumnName="COLUMN_COMMENT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="382" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TableName" msprop:Generator_TableClassName="TableNameDataTable" msprop:Generator_TableVarName="tableTableName" msprop:Generator_RowChangedName="TableNameRowChanged" msprop:Generator_TablePropName="TableName" msprop:Generator_RowDeletingName="TableNameRowDeleting" msprop:Generator_RowChangingName="TableNameRowChanging" msprop:Generator_RowEvHandlerName="TableNameRowChangeEventHandler" msprop:Generator_RowDeletedName="TableNameRowDeleted" msprop:Generator_RowClassName="TableNameRow" msprop:Generator_UserTableName="TableName" msprop:Generator_RowEvArgName="TableNameRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TABLE_NAME" msprop:Generator_ColumnVarNameInTable="columnTABLE_NAME" msprop:Generator_ColumnPropNameInRow="TABLE_NAME" msprop:Generator_ColumnPropNameInTable="TABLE_NAMEColumn" msprop:Generator_UserColumnName="TABLE_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_CATALOG" msprop:Generator_ColumnVarNameInTable="columnTABLE_CATALOG" msprop:Generator_ColumnPropNameInRow="TABLE_CATALOG" msprop:Generator_ColumnPropNameInTable="TABLE_CATALOGColumn" msprop:Generator_UserColumnName="TABLE_CATALOG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_SCHEMA" msprop:Generator_ColumnVarNameInTable="columnTABLE_SCHEMA" msprop:Generator_ColumnPropNameInRow="TABLE_SCHEMA" msprop:Generator_ColumnPropNameInTable="TABLE_SCHEMAColumn" msprop:Generator_UserColumnName="TABLE_SCHEMA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_TYPE" msprop:Generator_ColumnVarNameInTable="columnTABLE_TYPE" msprop:Generator_ColumnPropNameInRow="TABLE_TYPE" msprop:Generator_ColumnPropNameInTable="TABLE_TYPEColumn" msprop:Generator_UserColumnName="TABLE_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENGINE" msprop:Generator_ColumnVarNameInTable="columnENGINE" msprop:Generator_ColumnPropNameInRow="ENGINE" msprop:Generator_ColumnPropNameInTable="ENGINEColumn" msprop:Generator_UserColumnName="ENGINE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="96" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VERSION" msprop:Generator_ColumnVarNameInTable="columnVERSION" msprop:Generator_ColumnPropNameInRow="VERSION" msprop:Generator_ColumnPropNameInTable="VERSIONColumn" msprop:Generator_UserColumnName="VERSION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ROW_FORMAT" msprop:Generator_ColumnVarNameInTable="columnROW_FORMAT" msprop:Generator_ColumnPropNameInRow="ROW_FORMAT" msprop:Generator_ColumnPropNameInTable="ROW_FORMATColumn" msprop:Generator_UserColumnName="ROW_FORMAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_ROWS" msprop:Generator_ColumnVarNameInTable="columnTABLE_ROWS" msprop:Generator_ColumnPropNameInRow="TABLE_ROWS" msprop:Generator_ColumnPropNameInTable="TABLE_ROWSColumn" msprop:Generator_UserColumnName="TABLE_ROWS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AVG_ROW_LENGTH" msprop:Generator_ColumnVarNameInTable="columnAVG_ROW_LENGTH" msprop:Generator_ColumnPropNameInRow="AVG_ROW_LENGTH" msprop:Generator_ColumnPropNameInTable="AVG_ROW_LENGTHColumn" msprop:Generator_UserColumnName="AVG_ROW_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DATA_LENGTH" msprop:Generator_ColumnVarNameInTable="columnDATA_LENGTH" msprop:Generator_ColumnPropNameInRow="DATA_LENGTH" msprop:Generator_ColumnPropNameInTable="DATA_LENGTHColumn" msprop:Generator_UserColumnName="DATA_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MAX_DATA_LENGTH" msprop:Generator_ColumnVarNameInTable="columnMAX_DATA_LENGTH" msprop:Generator_ColumnPropNameInRow="MAX_DATA_LENGTH" msprop:Generator_ColumnPropNameInTable="MAX_DATA_LENGTHColumn" msprop:Generator_UserColumnName="MAX_DATA_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INDEX_LENGTH" msprop:Generator_ColumnVarNameInTable="columnINDEX_LENGTH" msprop:Generator_ColumnPropNameInRow="INDEX_LENGTH" msprop:Generator_ColumnPropNameInTable="INDEX_LENGTHColumn" msprop:Generator_UserColumnName="INDEX_LENGTH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DATA_FREE" msprop:Generator_ColumnVarNameInTable="columnDATA_FREE" msprop:Generator_ColumnPropNameInRow="DATA_FREE" msprop:Generator_ColumnPropNameInTable="DATA_FREEColumn" msprop:Generator_UserColumnName="DATA_FREE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AUTO_INCREMENT" msprop:Generator_ColumnVarNameInTable="columnAUTO_INCREMENT" msprop:Generator_ColumnPropNameInRow="AUTO_INCREMENT" msprop:Generator_ColumnPropNameInTable="AUTO_INCREMENTColumn" msprop:Generator_UserColumnName="AUTO_INCREMENT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CREATE_TIME" msprop:Generator_ColumnVarNameInTable="columnCREATE_TIME" msprop:Generator_ColumnPropNameInRow="CREATE_TIME" msprop:Generator_ColumnPropNameInTable="CREATE_TIMEColumn" msprop:Generator_UserColumnName="CREATE_TIME" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UPDATE_TIME" msprop:Generator_ColumnVarNameInTable="columnUPDATE_TIME" msprop:Generator_ColumnPropNameInRow="UPDATE_TIME" msprop:Generator_ColumnPropNameInTable="UPDATE_TIMEColumn" msprop:Generator_UserColumnName="UPDATE_TIME" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CHECK_TIME" msprop:Generator_ColumnVarNameInTable="columnCHECK_TIME" msprop:Generator_ColumnPropNameInRow="CHECK_TIME" msprop:Generator_ColumnPropNameInTable="CHECK_TIMEColumn" msprop:Generator_UserColumnName="CHECK_TIME" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TABLE_COLLATION" msprop:Generator_ColumnVarNameInTable="columnTABLE_COLLATION" msprop:Generator_ColumnPropNameInRow="TABLE_COLLATION" msprop:Generator_ColumnPropNameInTable="TABLE_COLLATIONColumn" msprop:Generator_UserColumnName="TABLE_COLLATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="48" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CHECKSUM" msprop:Generator_ColumnVarNameInTable="columnCHECKSUM" msprop:Generator_ColumnPropNameInRow="CHECKSUM" msprop:Generator_ColumnPropNameInTable="CHECKSUMColumn" msprop:Generator_UserColumnName="CHECKSUM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CREATE_OPTIONS" msprop:Generator_ColumnVarNameInTable="columnCREATE_OPTIONS" msprop:Generator_ColumnPropNameInRow="CREATE_OPTIONS" msprop:Generator_ColumnPropNameInTable="CREATE_OPTIONSColumn" msprop:Generator_UserColumnName="CREATE_OPTIONS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="382" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TABLE_COMMENT" msprop:Generator_ColumnVarNameInTable="columnTABLE_COMMENT" msprop:Generator_ColumnPropNameInRow="TABLE_COMMENT" msprop:Generator_ColumnPropNameInTable="TABLE_COMMENTColumn" msprop:Generator_UserColumnName="TABLE_COMMENT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

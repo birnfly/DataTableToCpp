@@ -1,0 +1,129 @@
+﻿<Window x:Class="DataTableToCpp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DataTable To Cpp CodeTool" Width="800" Height="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition />
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1"/>
+        <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="3"/>
+
+        <RichTextBox IsDocumentEnabled="True"  IsReadOnly="True">
+            <FlowDocument>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="100"/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Right">
+                                    连接字符串：
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell >
+                                <Paragraph TextAlignment="Left">
+                                    <TextBox x:Name="connectionString"  AcceptsReturn="True"  IsReadOnly="False" MinWidth="100"  IsEnabled="True" BorderThickness="0" Text="
+Driver={MySQL ODBC 5.3 Unicode Driver};&#xD;&#xA;
+server=192.168.1.100;&#xD;&#xA;
+uid=root;&#xD;&#xA;
+password=;&#xD;&#xA;
+database=goods_manager;&#xD;&#xA;
+port=3306" />
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Right">
+                                    
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Button x:Name="findTableButton"  IsEnabled="True" Click="findTableButton_Click" >查询表结构</Button>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </RichTextBox>
+        <ScrollViewer x:Name="scrList" Margin="0"  VerticalScrollBarVisibility="Auto" Grid.Row="2" >
+            <WrapPanel x:Name="tableGroup"  />
+        </ScrollViewer>
+
+        
+        <RichTextBox IsDocumentEnabled="True"  IsReadOnly="True" Grid.Row="4">
+        <FlowDocument>
+            <Table>
+                <Table.Columns>
+                    <TableColumn Width="100"/>
+                    <TableColumn/>
+                </Table.Columns>
+                <TableRowGroup>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph TextAlignment="Right">
+                                倒出方式：
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell >
+                                <Paragraph TextAlignment="Left">
+                                    <ComboBox SelectedIndex="0" x:Name="exportType">
+                                        <ComboBoxItem Content="多个.h文件"></ComboBoxItem>
+                                        <ComboBoxItem Content="单个.h文件"></ComboBoxItem>
+                                    </ComboBox>
+                                </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph TextAlignment="Right">
+                                文件编码：
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                                <Paragraph TextAlignment="Left">
+                                    <ComboBox x:Name="codeType"  SelectedIndex="0">
+                                        <ComboBoxItem Content="系统默认"></ComboBoxItem>
+                                        <ComboBoxItem Content="UTF-8"></ComboBoxItem>
+                                        <ComboBoxItem Content="ANSI"></ComboBoxItem>
+                                        <ComboBoxItem Content="Unicode"></ComboBoxItem>
+                                    </ComboBox>
+                                </Paragraph>
+                            </TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph TextAlignment="Right">
+                                    <Label Padding="0 5">保存位置：</Label>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                    <TextBox x:Name="savePath"  IsReadOnly="False" MinWidth="100" IsEnabled="True" BorderThickness="0"  />
+                                    <Run BaselineAlignment="Center">文件名称：</Run>
+                                    <TextBox x:Name="expName"  IsReadOnly="False" MinWidth="50" IsEnabled="True" BorderThickness="0" Text="DBMode"  />
+                                    <Button x:Name="save"  IsEnabled="True" Click="save_Click">导出选中文件</Button>
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                </TableRowGroup>
+            </Table>
+        </FlowDocument>
+        </RichTextBox>
+        <WrapPanel Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
+            <Button Content="全选" x:Name="selectAll" Click="selectAll_Click"/>
+            <Button Content="反选" x:Name="antiSel" Click="antiSel_Click"/>
+        </WrapPanel>
+        
+    </Grid>
+</Window>
